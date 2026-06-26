@@ -42,7 +42,7 @@ export default function Treatments() {
         </motion.div>
 
         {/* Grid de tarjetas de procedimientos (3 columnas en desktop) */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {procedures.map((proc: Procedure, i: number) => (
             <motion.div key={proc.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06, duration: 0.5 }} className="group relative rounded-2xl bg-white p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-sky-100/40 hover:border-sky-100 hover:-translate-y-1 transition-all duration-300">
               {/* Icono con efecto de cambio de color al hover */}
@@ -52,10 +52,7 @@ export default function Treatments() {
               <h3 className="text-base font-bold text-slate-800 mb-2 leading-snug">{proc.title}</h3>
               <p className="text-sm text-slate-500 leading-relaxed">{proc.description}</p>
               {/* Texto "Mas informacion" que aparece solo al hover */}
-              <div className="mt-4 flex items-center gap-1 text-sky-500 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span>Más información</span>
-                <svg className="h-4 w-4 translate-x-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-              </div>
+              <div className="mt-4 flex items-center gap-1 text-sky-500 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
           ))}
         </div>

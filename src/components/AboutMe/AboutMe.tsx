@@ -35,7 +35,7 @@ export default function AboutMe() {
                 </div>
               </div>
               {/* Badge flotante con anios de experiencia */}
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.3, duration: 0.5 }} className="absolute -bottom-4 -right-4 flex items-center gap-2 rounded-2xl bg-white px-5 py-3 shadow-lg shadow-sky-100/40 border border-sky-50">
+              <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.3, duration: 0.5 }} className="absolute -bottom-9 -right-4 flex items-center gap-2 rounded-2xl bg-white px-5 py-3 shadow-lg shadow-sky-100/40 border border-sky-50">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-cyan-400 text-white">
                   <FiAward className="h-5 w-5" />
                 </div>

@@ -122,7 +122,7 @@ export default function Hero() {
               transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
               <motion.h1
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight"
+                className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.1, duration: 0.5 }}
@@ -156,8 +156,8 @@ export default function Hero() {
                   key={i}
                   onClick={() => setPage([i, i > slideIndex ? 1 : -1])}
                   className={`h-2.5 rounded-full transition-all duration-300 ${i === slideIndex
-                      ? "w-8 bg-gradient-to-r from-sky-400 to-cyan-300"
-                      : "w-2.5 bg-white/30 hover:bg-white/50"
+                    ? "w-8 bg-gradient-to-r from-sky-400 to-cyan-300"
+                    : "w-2.5 bg-white/30 hover:bg-white/50"
                     }`}
                   aria-label={`Ir a slide ${i + 1}`}
                 />
@@ -201,17 +201,6 @@ export default function Hero() {
             </a>
           </motion.div>
         </div>
-
-        {/* Indicador de scroll animado (rebota verticalmente) */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="h-10 w-6 rounded-full border-2 border-white/30 flex items-start justify-center p-1.5">
-            <div className="h-2 w-1.5 rounded-full bg-white/60" />
-          </div>
-        </motion.div>
       </div>
 
       {/* ── Tarjetas de distintivos (sobrepuestas al hero con -mt-16) ── */}
